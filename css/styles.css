@@ -1,0 +1,83 @@
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+.checkers-board {
+    box-sizing: content-box;
+    width: 640px;
+    height: 640px;
+    border: 10px ridge #5b4b39;
+    outline: 25px outset #f3e0c4;
+    top: 35px;
+    margin: 35px auto;
+}
+
+[class^="checkers-board-cell_"] {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+[class="checkers-board-cell_black"] {
+    background: url(../images/darkwood.jpg);  
+}
+[class="checkers-board-cell_white"] {
+    background: url(../images/lightwood.jpg);   
+}
+
+[class^="checkers-checker-"] {
+    width:60px;
+    height: 60px;
+    margin: 10px;
+    box-shadow: 10px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .1s ease-in;   
+}
+.checkers-checker-black {
+    background: url(../images/black.png); 
+}
+
+.checkers-checker-white {
+    background: url(../images/white.png);   
+}
+[class^="checkers-checker-"]:hover {
+    box-shadow: 10px 5px 15px rgba(0,0,0,0.7);
+    transform: scale(1.05);
+}
+
+[class="checkers-board-cell_black"]:empty:hover {
+   opacity: 0.95;
+}
+[class="checkers-board-cell_white"]:empty:hover {
+    opacity: 0.9;
+}
